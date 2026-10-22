@@ -1,0 +1,8 @@
+cluster,n_movies,top_tags,top_genres,mean_rating,median_year,median_n_ratings
+0,2753,"comedy, predictable, funny, silly fun, teen movie, silly, idiotic, girlie movie","Children, Comedy",2.899313449859619,1999.0,28.0
+1,1942,"touching, sentimental, dramatic, heartwarming, drama, feel-good, courage, love story",Romance,3.580538749694824,1998.0,27.5
+2,1262,"imdb top 250, great acting, tense, oscar (best directing), masterpiece, social commentary, dramatic, powerful ending",,3.8528096675872803,1998.0,89.0
+3,789,"horror, splatter, creepy, supernatural, blood, scary, gory, demons","Horror, Thriller, Mystery, Sci-Fi",2.938368797302246,1997.0,22.0
+4,1000,"thriller, action, murder, crime, suspense, chase, conspiracy, corruption","Crime, Thriller, Mystery, Action",3.3032960891723633,2000.0,36.0
+5,797,"special effects, sci-fi, big budget, scifi, science fiction, action, sci fi, futuristic","IMAX, Sci-Fi, Adventure, Action",3.0845603942871094,2005.0,117.0
+6,1615,"intimate, criterion, enigmatic, golden palm, loneliness, melancholic, bleak, independent film","Drama, Romance",3.6506829261779785,1998.0,17.0

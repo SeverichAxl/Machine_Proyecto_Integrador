@@ -1,0 +1,27 @@
+{
+  "tool": "FLAML",
+  "time_budget_s": 600,
+  "elapsed_s": 616.1,
+  "seed": 42,
+  "metric": "rmse",
+  "estimators": [
+    "lgbm",
+    "xgboost",
+    "rf",
+    "extra_tree"
+  ],
+  "best_estimator": "lgbm",
+  "best_config": {
+    "n_estimators": 6101,
+    "num_leaves": 4,
+    "min_child_samples": 49,
+    "learning_rate": 0.08925235460224837,
+    "log_max_bin": 9,
+    "colsample_bytree": 0.7588420562199519,
+    "reg_alpha": 42.76465181451931,
+    "reg_lambda": 0.031765883524111874
+  },
+  "val_rmse": 0.8478464555697616,
+  "n_features": 28,
+  "protocol": "misma partici\u00f3n temporal; validaci\u00f3n = split val; test no usado"
+}
