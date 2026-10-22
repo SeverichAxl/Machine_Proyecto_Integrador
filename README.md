@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Recomendación de películas · MovieLens 25M (SIS-351, EC2 Parte I)
 
 Pipeline reproducible CRISP-DM: formulación, EDA, baselines, 3+ modelos clásicos, clustering de películas y AutoML.
@@ -47,3 +48,6 @@ GroupLens, MovieLens 25M. Verificar cifras y versión en el README oficial del d
 
 ## Apoyos declarados
 Código generado con asistencia de IA (Claude) y revisado por el equipo. Librerías: pandas, scikit-learn, numba, FLAML, matplotlib.
+=======
+# Machine_Proyecto_Integrador
+>>>>>>> 163ec17f3218528d6bd1a38fdb94708d9115cdda
