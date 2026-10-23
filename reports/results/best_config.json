@@ -1,7 +1,7 @@
 {
   "global_mean": {
     "params": {},
-    "val_rmse": 1.0531780276280125
+    "val_rmse": 1.0478813185644864
   },
   "popularity": {
     "params": {},
@@ -11,35 +11,35 @@
     "params": {
       "damping": 5
     },
-    "val_rmse": 0.9570297902537697
+    "val_rmse": 0.9641498229425896
   },
   "bias_baseline": {
     "params": {
       "damping": 5
     },
-    "val_rmse": 0.866846129002824
+    "val_rmse": 0.8596667393125538
   },
   "item_knn": {
     "params": {
       "k": 50,
       "shrink": 50
     },
-    "val_rmse": 0.8198159190146475
+    "val_rmse": 0.8256855744091356
   },
   "funk_svd": {
     "params": {
-      "n_factors": 20,
+      "n_factors": 50,
       "lr": 0.005,
-      "reg": 0.02,
+      "reg": 0.05,
       "epochs": 24
     },
-    "val_rmse": 0.8261168619024065
+    "val_rmse": 0.845702835971682
   },
   "ridge_features": {
     "params": {
       "alpha": 1
     },
-    "val_rmse": 0.8577518463134766
+    "val_rmse": 0.8485449552536011
   },
   "hgb_features": {
     "params": {
@@ -47,7 +47,7 @@
       "learning_rate": 0.1,
       "max_iter": 300
     },
-    "val_rmse": 0.8471970403370962
+    "val_rmse": 0.8339019004252871
   },
   "best_manual": "item_knn"
 }

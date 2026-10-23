@@ -1,9 +1,12 @@
 """Features tabulares SIN leakage. Todo lo que se aprende del target (sesgos, medias, afinidad por género)
 se calcula solo con datos de ajuste: en train mediante out-of-fold; en val/test con todo train."""
-import numpy as np, pandas as pd
-from sklearn.model_selection import KFold
 import joblib
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import KFold
+
 from .common import path
+
 
 def make_static(movies):
     m = movies.set_index("movieId")
@@ -61,7 +64,10 @@ def build_feature_sets(cfg, train, val, movies, cache=True):
     out, models = path(cfg, "processed"), path(cfg, "models")
     names = ["feat_train", "feat_val"]
     if cache and all((out / f"{n}.parquet").exists() for n in names) and (models / "feature_builder.joblib").exists():
-        return (joblib.load(models / "feature_builder.joblib"), *[pd.read_parquet(out / f"{n}.parquet") for n in names])
+        sets = [pd.read_parquet(out / f"{n}.parquet") for n in names]
+        if [len(s) for s in sets] == [len(train), len(val), len(test)]:
+            return (joblib.load(models / "feature_builder.joblib"), *sets)
+        print("Caché de features desactualizado; se recalcula.")
     f = cfg["features"]; static = make_static(movies)
     Xtr = oof_features(train, static, f["damping"], f["genre_k"], cfg["oof_folds"], cfg["seed"])
     fb = FeatureBuilder(static, f["damping"], f["genre_k"], 1.0).fit(train)

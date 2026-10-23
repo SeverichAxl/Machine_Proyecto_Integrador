@@ -3,7 +3,7 @@ paths: {raw: data/raw/ml-25m, processed: data/processed, models: models, results
 subset:
   min_ratings_user: 20
   min_ratings_movie: 50
-  n_users: 15000          # usuarios completos muestreados (ajustar con el EDA y la RAM)
+  n_users: 2000          # usuarios completos muestreados (ajustar con el EDA y la RAM)
   min_ratings_movie_after_sample: 10
 split: {train: 0.70, val: 0.15}   # test = resto; temporal por usuario
 oof_folds: 5
