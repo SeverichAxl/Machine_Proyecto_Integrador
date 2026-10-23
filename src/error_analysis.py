@@ -12,7 +12,9 @@ def main():
     uc, mc = train.userId.value_counts(), train.movieId.value_counts()
     d["user_activity"] = pd.qcut(d.userId.map(uc).fillna(0), 4, duplicates="drop").astype(str)
     d["movie_popularity"] = pd.qcut(d.movieId.map(mc).fillna(0), 4, duplicates="drop").astype(str)
-    yr = movies.title.str.extract(r"\((\d{4})\)\s*$")[0].astype(float); d["decade"] = (d.movieId.map(yr) // 10 * 10).astype("Int64").astype(str)
+    yr = movies.title.str.extract(r"\((\d{4})\)\s*$")[0].astype(float)
+    decade = (d.movieId.map(yr) // 10 * 10).astype("Int64")
+    d["decade"] = decade.astype(str).where(decade.notna(), "unknown")
     out = {}
     def seg(col, frame):
         g = frame.groupby(col).agg(n=("err", "size"), bias=("err", "mean"), mae=("abs", "mean"), mse=("sq", "mean")); g["rmse"] = np.sqrt(g.pop("mse")); return g.round(4)
