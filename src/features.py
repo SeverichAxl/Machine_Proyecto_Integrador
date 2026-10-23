@@ -65,7 +65,7 @@ def build_feature_sets(cfg, train, val, movies, cache=True):
     names = ["feat_train", "feat_val"]
     if cache and all((out / f"{n}.parquet").exists() for n in names) and (models / "feature_builder.joblib").exists():
         sets = [pd.read_parquet(out / f"{n}.parquet") for n in names]
-        if [len(s) for s in sets] == [len(train), len(val), len(test)]:
+        if [len(s) for s in sets] == [len(train), len(val)]:
             return (joblib.load(models / "feature_builder.joblib"), *sets)
         print("Caché de features desactualizado; se recalcula.")
     f = cfg["features"]; static = make_static(movies)

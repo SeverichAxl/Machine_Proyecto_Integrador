@@ -1,7 +1,7 @@
 {
   "tool": "FLAML",
   "time_budget_s": 600,
-  "elapsed_s": 616.1,
+  "elapsed_s": 618.4,
   "seed": 42,
   "metric": "rmse",
   "estimators": [
@@ -21,7 +21,7 @@
     "reg_alpha": 42.76465181451931,
     "reg_lambda": 0.031765883524111874
   },
-  "val_rmse": 0.8478464555697616,
+  "val_rmse": 0.8477254382353187,
   "n_features": 28,
   "protocol": "misma partici\u00f3n temporal; validaci\u00f3n = split val; test no usado"
 }
